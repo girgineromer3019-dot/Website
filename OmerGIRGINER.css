@@ -1,79 +1,61 @@
+/* Genel sayfa stili */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  line-height: 1.6;
-  background: #f9f9f9;
-  color: #333;
 }
 
-header {
-  background: hsl(60, 1%, 18%);
-  color: white;
-  text-align: center;
-  padding: 2rem;
+/* Menü */
+header div {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background: gray;
+  padding: 10px;
 }
 
-nav {
-  background: #333;
-  text-align: center;
-  padding: 1rem;
-}
-
-nav a {
-  color: white;
-  margin: 0 1rem;
+header a {
   text-decoration: none;
+  color: black;
+  font-weight: bold;
 }
 
-nav a:hover {
-  text-decoration: underline;
-}
-
-section {
-  padding: 2rem;
-  max-width: 800px;
-  margin: auto;
-}
-
-footer {
-  background: #222;
-  color: #bbb;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
-}
-
-#whatsappButton {
-  color: red;
-}
-
-#GitHubButton{
-  color: red;
-}
-
-#mailButton{
-  color: red;
-}
-
+/* Paragraf (ilk satır girintisi örneği) */
 .Paragraf {
-  text-indent: 1em;
+  text-indent: 30px;
 }
 
-.h2 {
-  color: red;
+/* Contact butonları yan yana */
+.button-container {
+  display: flex;            /* yan yana dizer */
+  justify-content: center;  /* ortaya hizalar */
+  gap: 15px;                /* butonlar arasında boşluk */
+  margin-top: 20px;
 }
 
-#contact {
-    text-align: center;
-    padding: 2rem;
+.button-container button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  background-color: #0073e6;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-#contact button {
-    display: inline-block; /* yan yana durmalarını sağlar */
-    margin: 0 10px;        /* aralarına boşluk */
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
+.button-container button:hover {
+  background-color: #005bb5; /* hover efekti */
+}
+
+#contact h2{
+  text-align: center;
+}
+
+#projects h2{
+  text-align: center;
+}
+
+#about h2{
+  text-align: center;
 }
