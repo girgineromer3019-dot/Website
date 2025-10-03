@@ -43,3 +43,37 @@ footer {
   padding: 1rem;
   margin-top: 2rem;
 }
+
+#whatsappButton {
+  color: red;
+}
+
+#GitHubButton{
+  color: red;
+}
+
+#mailButton{
+  color: red;
+}
+
+.Paragraf {
+  text-indent: 1em;
+}
+
+.h2 {
+  color: red;
+}
+
+#contact {
+    text-align: center;
+    padding: 2rem;
+}
+
+#contact button {
+    display: inline-block; /* yan yana durmalarını sağlar */
+    margin: 0 10px;        /* aralarına boşluk */
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
