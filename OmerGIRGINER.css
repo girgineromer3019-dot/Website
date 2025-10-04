@@ -25,6 +25,10 @@ header a {
   text-indent: 30px;
 }
 
+.Titel {
+  font-weight: bold;
+}
+
 /* Contact butonları yan yana */
 .button-container {
   display: flex;            /* yan yana dizer */
