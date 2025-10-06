@@ -5,22 +5,25 @@ body {
   padding: 0;
 }
 
-/* Menü */
+
 header div {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  background: gray;
+  gap: 20%;
+  background-color: black;
   padding: 10px;
 }
 
 header a {
   text-decoration: none;
-  color: black;
+  color: white;
   font-weight: bold;
 }
 
-/* Paragraf (ilk satır girintisi örneği) */
+#about h2, #projects h2, #contact h2 {
+  text-align: center;
+}
+
 .Paragraf {
   text-indent: 30px;
 }
@@ -29,18 +32,18 @@ header a {
   font-weight: bold;
 }
 
-/* Contact butonları yan yana */
 .button-container {
-  display: flex;            /* yan yana dizer */
-  justify-content: center;  /* ortaya hizalar */
-  gap: 15px;                /* butonlar arasında boşluk */
-  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25%;                /* butonlar arası boşluk */
+  margin-top: 20px;        /* h2 ile arası */
 }
 
 .button-container button {
   padding: 10px 20px;
   font-size: 16px;
-  border-radius: 5px;
+  border-radius: 15px;
   border: none;
   background-color: #0073e6;
   color: white;
@@ -49,17 +52,19 @@ header a {
 }
 
 .button-container button:hover {
-  background-color: #005bb5; /* hover efekti */
+  background-color: darkblue;
 }
 
-#contact h2{
+#contact {
   text-align: center;
+  padding: 40px 30px;       /* üstten ve alttan boşluk */
+  background-color: #f0f0f0; /* isteğe bağlı arka plan */
 }
 
-#projects h2{
+footer {
   text-align: center;
-}
-
-#about h2{
-  text-align: center;
+  margin-top: auto;
+  padding: 15px 0;
+  background-color: #222;
+  color: white;
 }
