@@ -20,7 +20,15 @@ header a {
   font-weight: bold;
 }
 
-#about h2, #projects h2, #contact h2 {
+#about h2, #projects h2 {
+  text-align: center;
+  background-color: black;
+  color: white;
+  padding: 10px 30px;
+  margin-top: auto;
+}
+
+#contact h2{
   text-align: center;
 }
 
