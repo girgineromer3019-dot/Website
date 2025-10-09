@@ -10,13 +10,17 @@ header div {
   display: flex;
   justify-content: center;
   gap: 20%;
-  background-color: black;
-  padding: 10px;
+  background-color: white;
+  padding: 20px;
+}
+
+header div :hover {
+font-size: x-large;
 }
 
 header a {
   text-decoration: none;
-  color: white;
+  color: black;
   font-weight: bold;
 }
 
@@ -44,7 +48,7 @@ header a {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 25%;                /* butonlar arası boşluk */
+  gap: 15%;                /* butonlar arası boşluk */
   margin-top: 20px;        /* h2 ile arası */
 }
 
@@ -75,4 +79,28 @@ footer {
   padding: 15px 0;
   background-color: #222;
   color: white;
+}
+
+.light { /* mausun haraketi ile isik cikarmasini sagliyor */
+  position: fixed;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(245, 243, 243, 0.9) 0%, rgba(3, 22, 66, 0.3) 70%, transparent 100%);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  animation: fadeOut 0.3s linear forwards;
+  mix-blend-mode: screen;
+  z-index: 9999; /* sayfanın üstünde kalsın */
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(2);
+  }
 }
