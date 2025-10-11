@@ -36,6 +36,11 @@ header a {
   text-align: center;
 }
 
+#projects li a:hover,#projects li:hover{
+  color:#0073e6;
+  font-size: large;
+}
+
 .Paragraf {
   text-indent: 30px;
 }
