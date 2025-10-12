@@ -3,41 +3,47 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  padding-top: 55px;
+  background-color: #fffbe6; /* Açık sarımsı ton */
 }
 
 
 header div {
+  position: fixed; /* Header kismini yukariya sabitliyor */
+  top: 0;
+  width: 100%; /* Yaziyi tum genislige yayiyor */
+  background: rgba(255, 87, 51, 0.85); /* Canlı turuncu-kırmızı, şeffaf */
+  backdrop-filter: blur(7px); /* Headerin altindaki yaziyi bulanik hale getirir */
   display: flex;
   justify-content: center;
   gap: 20%;
-  background-color: white;
   padding: 20px;
 }
 
 header div :hover {
-font-size: x-large;
+  font-size: x-large;
 }
 
 header a {
   text-decoration: none;
-  color: black;
+  color: #ffffff; /* Beyaz, header ile kontrastlı */
   font-weight: bold;
 }
 
 #about h2, #projects h2 {
   text-align: center;
-  background-color: black;
-  color: white;
+  background-color: #ff5722; /* Canlı turuncu */
+  color: #ffffff; /* Beyaz yazı */
   padding: 10px 30px;
   margin-top: auto;
 }
 
-#contact h2{
+#contact h2 {
   text-align: center;
 }
 
-#projects li a:hover,#projects li:hover{
-  color:#0073e6;
+#projects li a:hover, #projects li:hover {
+  color: #00bfa5; /* Canlı turkuaz */
   font-size: large;
 }
 
@@ -53,8 +59,8 @@ header a {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 15%;                /* butonlar arası boşluk */
-  margin-top: 20px;        /* h2 ile arası */
+  gap: 15%; /* butonlar arası boşluk */
+  margin-top: 20px; /* h2 ile arası */
 }
 
 .button-container button {
@@ -62,28 +68,28 @@ header a {
   font-size: 16px;
   border-radius: 15px;
   border: none;
-  background-color: #0073e6;
-  color: white;
+  background-color: #00bfa5; /* Canlı turkuaz */
+  color: #ffffff; /* Beyaz yazı */
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .button-container button:hover {
-  background-color: darkblue;
+  background-color: #009e8f; /* Hover daha koyu turkuaz */
 }
 
 #contact {
   text-align: center;
-  padding: 40px 30px;       /* üstten ve alttan boşluk */
-  background-color: #f0f0f0; /* isteğe bağlı arka plan */
+  padding: 40px 30px; /* üstten ve alttan boşluk */
+  background-color: #fffbe6; /* Açık sarımsı ton */
 }
 
 footer {
   text-align: center;
   margin-top: auto;
   padding: 15px 0;
-  background-color: #222;
-  color: white;
+  background-color: #1a1a2e; /* Koyu lacivert / modern görünüm */
+  color: #ffffff; /* Beyaz yazı */
 }
 
 .light { /* mausun haraketi ile isik cikarmasini sagliyor */
