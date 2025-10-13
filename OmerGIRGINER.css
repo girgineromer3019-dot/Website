@@ -1,10 +1,9 @@
-/* Genel sayfa stili */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  padding-top: 55px;
-  background-color: #fffbe6; /* Açık sarımsı ton */
+  padding-top: 57px;
+  background-color: #fffbe6;
 }
 
 
@@ -12,7 +11,7 @@ header div {
   position: fixed; /* Header kismini yukariya sabitliyor */
   top: 0;
   width: 100%; /* Yaziyi tum genislige yayiyor */
-  background: rgba(255, 87, 51, 0.85); /* Canlı turuncu-kırmızı, şeffaf */
+  background: rgba(255, 87, 51, 0.7); 
   backdrop-filter: blur(7px); /* Headerin altindaki yaziyi bulanik hale getirir */
   display: flex;
   justify-content: center;
@@ -26,14 +25,14 @@ header div :hover {
 
 header a {
   text-decoration: none;
-  color: #ffffff; /* Beyaz, header ile kontrastlı */
+  color: #ffffff; 
   font-weight: bold;
 }
 
 #about h2, #projects h2 {
   text-align: center;
-  background-color: #ff5722; /* Canlı turuncu */
-  color: #ffffff; /* Beyaz yazı */
+  background-color: #ff5722;
+  color: #ffffff; 
   padding: 10px 30px;
   margin-top: auto;
 }
@@ -43,7 +42,7 @@ header a {
 }
 
 #projects li a:hover, #projects li:hover {
-  color: #00bfa5; /* Canlı turkuaz */
+  color: #00bfa5; 
   font-size: large;
 }
 
@@ -75,34 +74,40 @@ header a {
 }
 
 .button-container button:hover {
-  background-color: #009e8f; /* Hover daha koyu turkuaz */
+  background-color: #00796b;
 }
 
 #contact {
   text-align: center;
   padding: 40px 30px; /* üstten ve alttan boşluk */
-  background-color: #fffbe6; /* Açık sarımsı ton */
+  background-color: #fffbe6;
 }
 
 footer {
   text-align: center;
   margin-top: auto;
   padding: 15px 0;
-  background-color: #1a1a2e; /* Koyu lacivert / modern görünüm */
-  color: #ffffff; /* Beyaz yazı */
+  background-color: #1a1a2e;
+  color: #ffffff;
 }
 
-.light { /* mausun haraketi ile isik cikarmasini sagliyor */
+.light { /* Maus hareketi ile ışık çıkarmasını sağlıyor*/
   position: fixed;
   width: 13px;
   height: 13px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(245, 243, 243, 0.9) 0%, rgba(3, 22, 66, 0.3) 70%, transparent 100%);
+  background: radial-gradient(
+    circle,
+    rgba(255, 87, 51, 1) 0%,
+    rgba(255, 87, 51, 0.6) 40%,
+    rgba(255, 87, 51, 0.4) 70%,
+    transparent 100%
+  );
   pointer-events: none;
   transform: translate(-50%, -50%);
   animation: fadeOut 0.3s linear forwards;
-  mix-blend-mode: screen;
-  z-index: 9999; /* sayfanın üstünde kalsın */
+  mix-blend-mode: normal;
+  z-index: 9999; /* Sayfanın üstünde kalsın */
 }
 
 @keyframes fadeOut {
