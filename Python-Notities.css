@@ -91,3 +91,25 @@ footer {
   color: #ffffff;
 }
 
+table {
+  width: 90%;
+  border-collapse: collapse;/*Tablonun hucrelerinin birlikte olmasini sagliyor*/
+  margin: 20px auto;/*Ustten 20 px bosluk ve sayfanin ortasina auto hizalar*/
+  font-family: Arial, sans-serif;
+}
+
+th, td {
+  border: 6px solid #555;
+  padding: 10px;/*Hucre icindeki yazi ile kenarlik arasinda bosluk*/
+  text-align: center;
+}
+
+th {
+  background-color: #007BFF;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
