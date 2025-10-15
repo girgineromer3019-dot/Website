@@ -12,12 +12,14 @@
 </head>
 
 <body>
+
     <header>
         <div>
             <a href="#informatie">Informatie</a>
             <a href="#exercise">Exercise</a>
         </div>
     </header>
+
 
     <section id="informatie">
         <h2><i class="fa-brands fa-python"></i></i>Informatie over Python</h2>
@@ -140,14 +142,41 @@ Instead of using a long for loop, you can make a list in one line.</p>
         </pre>
     </section>
 
+
     <section id="exercise">
         <h2><i class="fa-solid fa-dumbbell"></i>Exercise</h2>
         <ul>
-            <li>Proje1</li>
-            <li>Proje2</li>
+            <li>Simple calculator</li>
+            <pre>
+                <code>
+                num1 = int(input("First number: "))
+                num2 = int(input("Second number: "))
+
+                    print("Sum:", num1 + num2)
+                    print("Difference:", num1 - num2)
+                    print("Product:", num1 * num2)
+                    print("Division:", num1 / num2)
+
+                </code>
+            </pre>
+            <li>Factorial calculation</li>
+            <pre>
+                <code>
+                num = int(input("Enter a number: "))
+                fact = 1
+
+                for i in range(1, num + 1):
+                    fact *= i
+
+                print(f"{num}! = {fact}")
+
+                </code>
+            </pre>
             <li>Proje3</li>
         </ul>
     </section>
+
+
     <footer>
         <p>© 2025 Omer Girginer.</p>
     </footer>
