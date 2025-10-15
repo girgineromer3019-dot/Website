@@ -67,8 +67,8 @@ header a {
   font-size: 16px;
   border-radius: 15px;
   border: none;
-  background-color: #00bfa5; /* Canlı turkuaz */
-  color: #ffffff; /* Beyaz yazı */
+  background-color: #00bfa5;
+  color: #ffffff;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }

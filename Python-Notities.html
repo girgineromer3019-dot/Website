@@ -104,11 +104,14 @@
         </table>
         <p>In Python, the type() function is used to find out the data type of a variable.</p>
         <p>Example:</p>
-        <p style="text-indent: 30px;">x=42</p>
-        <p style="text-indent: 50px;">print(type(x))</p>
-        <p style="text-indent: 30px;">Output:</p>
-        <p style="text-indent: 50px;">class int</p>
-
+        <pre>
+            <code>
+                x=42
+                    print(type(x))
+                Output:
+                    class int
+            </code>
+        </pre>
         <p class="Titel">Python Loops and Statement:</p>
         <ul>
             <li>While loops: With the while loop we can execute a set of statements as long as a condition is true.</li>
@@ -116,6 +119,25 @@
             <li>Break statement: With the break statement we can stop the loop before it has looped through all the items</li>
             <li>Continue statement: With the continue statement we can stop the current iteration of the loop, and continue with the next</li>
         </ul>
+        <p class="Titel">List Comprehension: </p>
+        <p>List comprehension is a short way to create lists in Python.
+Instead of using a long for loop, you can make a list in one line.</p>
+        <p>Normal Way: </p>
+        <pre>
+            <code>
+            numbers = [] 
+            for i in range(5):
+                numbers.append(i)
+            print(numbers)            
+            </code>
+        </pre>
+        <p>With List Comprehension:</p>
+        <pre>
+            <code>
+            numbers = [i for i in range(5)]
+            print(numbers)
+            </code>
+        </pre>
     </section>
 
     <section id="exercise">
