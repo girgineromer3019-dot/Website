@@ -52,6 +52,7 @@ header a {
 
 .Titel {
   font-weight: bold;
+  text-indent: 0%;
 }
 
 .button-container {
