@@ -67,7 +67,7 @@ header a {
   font-size: 16px;
   border-radius: 15px;
   border: none;
-  background-color: #00bfa5;
+  background-color: #00bfa5;;
   color: #ffffff;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -120,3 +120,32 @@ footer {
     transform: translate(-50%, -50%) scale(2);
   }
 }
+
+/* Telefon ve tabletler için ayarlandi*/
+@media (max-width: 768px) {
+  header div {
+    flex-direction: column; /* Menüdeki linkler alt alta gelsin */
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .button-container {
+    flex-direction: column; /* Butonlar alt alta gelsin */
+    align-items: center;
+    gap: 15px; /* Yatay yüzde boşluk yerine dikey boşluk */
+  }
+
+  .button-container button {
+    width: 80%; /* Butonlar genişlesin */
+    font-size: 18px;
+  }
+
+  #about h2, #projects h2, #contact h2 {
+    font-size: 20px;
+  }
+
+  body {
+    padding-top: 100px; /* Header daha yüksek olacak, boşluk ekliyoruz */
+  }
+}
+
