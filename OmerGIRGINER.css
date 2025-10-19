@@ -122,11 +122,10 @@ footer {
 }
 
 /* Telefon ve tabletler için ayarlandi*/
-@media (max-width: 768px) {
+@media (max-width: 895px) {
   header div {
-    flex-direction: column; /* Menüdeki linkler alt alta gelsin */
-    gap: 10px;
-    padding: 10px;
+    gap: 20%;
+    padding: 40px;
   }
 
   .button-container {
