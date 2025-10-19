@@ -195,12 +195,28 @@
         </ul>
         <br>
 
+        <p class="Titel">List Comprehension in Python</p>
+        <p>List comprehension is a concise way to create lists in Python. It allows you to generate a new list by applying an expression to each item in an existing iterable (like a list or range) and optionally filtering items based on a condition.</p>
+        <p>Example:</p>
+        <pre>
+            <code>
+            numbers = [1, 2, 3, 4, 5]
+
+            numbers_power_2 = [x**2 for x in numbers]
+                print(numbers_power_2)  
+            Output: [1, 4, 9, 16, 25]
+            </code>
+        </pre>  
+        <br>
+
+
     </section>
 
 
     <section id="exercise">
         <h2><i class="fa-solid fa-dumbbell"></i>Exercise</h2>
         <ul>
+            
             <li>Simple calculator</li>
             <pre>
                 <code>
@@ -214,6 +230,7 @@
 
                 </code>
             </pre>
+
             <li>Factorial calculation</li>
             <pre>
                 <code>
@@ -227,6 +244,7 @@
 
                 </code>
             </pre>
+
             <li>Even or Odd Number</li>
             <pre>
                 <code>
@@ -239,6 +257,7 @@
 
                 </code>
             </pre>
+
             <li>Find the Largest Number</li>
             <pre>
                 <code>
@@ -254,6 +273,7 @@
                     print("Largest number:", c)
                 </code>
             </pre>
+
             <li>Age Calculator</li>
             <pre>
                 <code>
@@ -263,6 +283,31 @@
                 print(f"Your age is: {age}")
                 </code>
             </pre>
+
+            <li>Simple Atm Menu</li>
+            <pre>
+                <code>
+                balance = 0
+
+                while True:
+                    print("\n1-Check Balance\n2-Deposit\n3-Withdraw\n4-Exit")
+                    choice = input("Choice: ")
+
+                    if choice == "1":
+                        print("Balance:", balance)
+                    elif choice == "2":
+                        amount = int(input("Deposit amount: "))
+                        balance += amount
+                    elif choice == "3":
+                        amount = int(input("Withdraw amount: "))
+                        balance -= amount
+                    elif choice == "4":
+                        break
+                    else:
+                        print("Invalid option!")
+                </code>
+            </pre>
+
             <li>Proje3</li>
         </ul>
     </section>

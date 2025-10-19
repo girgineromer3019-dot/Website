@@ -118,9 +118,9 @@ tr:nth-child(even) {
 pre {
   background-color: #272822;
   color: #f8f8f2;
-  width: 80%;
+  width: 85%;
   margin: 10px auto;
-  padding: 5px;
+  padding: 10px 40px;
   border-radius: 15px;
   font-family: Consolas, monospace;
   font-size: 15px;
@@ -128,3 +128,12 @@ pre {
   line-height: 1.5;
 }
 
+@media (max-width: 800px) {
+  pre {
+    width: 95%;
+    padding: 5px 10px;
+    font-size: 13px;
+    text-align: left;
+    border-radius: 0;
+  }
+}
