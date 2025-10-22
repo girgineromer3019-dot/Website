@@ -137,3 +137,13 @@ pre {
     border-radius: 0;
   }
 }
+
+.logo-python {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%; /* Yuvarlak fotoğraf */
+  display: block;
+  margin: 20px auto;  /* Ortalar */
+  border: 3px solid #4CAF50; /* İstersen rengini değiştirebilirsin */
+}
