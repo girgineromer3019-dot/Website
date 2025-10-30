@@ -246,7 +246,6 @@
 
             output = sum(3, 7)
             print("Output:", output)
-
             </code>
         </pre>
 
@@ -264,10 +263,20 @@
             print("Product:", c)
             </code>
         </pre>
-        <br>
 
-    </section>
+        <pre>
+            <code>
+            def external_function():
+                print("External function worked.")
 
+                def internal_function():
+                    print("Internal function worked.")
+
+                internal_function()
+
+            external_function()
+            </code>
+        </pre>
 
     <section id="exercise">
         <h2><i class="fa-solid fa-dumbbell"></i>Exercise</h2>
