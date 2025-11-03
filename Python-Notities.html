@@ -251,16 +251,19 @@
 
         <pre>
             <code>
+            a = int(input("Please enter the first number you want to calculate: "))
+            b = int(input("Please enter the second number to use in the calculation: "))
+
             def calculation(a, b):
-                sum = a + b
+                sum_ = a + b
                 difference = a - b
                 product = a * b
-                return sum, difference, product
+                return sum_, difference, product
 
-            t, f, c = calculation(10, 5)
-            print("Sum:", t)
-            print("Difference:", f)
-            print("Product:", c)
+            sum_, difference, product = calculation(a, b)
+            print("Sum:", sum_)
+            print("Difference:", difference)
+            print("Product:", product)
             </code>
         </pre>
 
