@@ -15,13 +15,13 @@ document.getElementById("whatsappButton").addEventListener("click", function() {
 });
 
 
-document.addEventListener("mousemove", (e) => { // Mausun haraketini senkronize eder
+document.addEventListener("mousemove", (e) => { /* Mausun haraketini senkronize eder */
   const light = document.createElement("div");
   light.classList.add("light");
   light.style.left = e.clientX + "px";
   light.style.top = e.clientY + "px";
   document.body.appendChild(light);
 
-  // Animasyon tamamlanınca DOM'dan kaldır
+  /* Animasyon tamamlanınca DOM'dan kaldır */
   setTimeout(() => light.remove(), 800);
 });
