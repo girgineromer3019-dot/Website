@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background: #f0f2f5;
+  background: linear-gradient(to right, #87CEFA 0%, #40E0D0 33%, #008080 66%, #000080 100%); /* Arka plandaki mavi tonlarda degrade sagliyor*/
   display: flex;
   justify-content: center;
   padding-top: 60px;
@@ -11,7 +11,7 @@ body {
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  width: 300px;
+  width: 600px;
 }
 
 input {
@@ -22,14 +22,21 @@ input {
 button {
   padding: 8px 10px;
   margin-left: 5px;
+  cursor: pointer;
 }
 
-li {
-  list-style: none;
-  padding: 5px 0;
+/* Liste numaralarını gösterir */
+ol {
+  list-style-type: decimal;
+  list-style-position: outside;
+  display: block;
+  margin-left: 30px;
+  padding-left: 25px;
 }
 
+/* Tamamlanmış görev stili */
 li.done {
   text-decoration: line-through;
   color: gray;
+  font-size: small;
 }
