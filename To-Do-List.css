@@ -1,42 +1,78 @@
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(to right, #87CEFA 0%, #40E0D0 33%, #008080 66%, #000080 100%); /* Arka plandaki mavi tonlarda degrade sagliyor*/
+  background: linear-gradient(to right, #FFEC8B 0%, #FFD700 33%, #FF7F00 66%, #FF0000 100%);
   display: flex;
   justify-content: center;
   padding-top: 60px;
+  min-height: 100vh;
+  margin: 0;
 }
 
 .todo-container {
-  background: linear-gradient(to right, #4646ec 0%, #008080 33%, #40E0D0 66%, #87CEFA 80%);
+  background: rgba(255, 255, 255, 0.85); /* Hafif şeffaf beyaz kutu */
   padding: 20px;
   border-radius: 20px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  width: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  width: 100%;
+  margin-bottom: 60px;
+  max-width: 600px;
+  font-size: large;
+  color: #222;
 }
 
 input {
   width: 75%;
-  padding: 8px;
+  padding: 10px;
+  border: 5px solid #FF7F00;
+  border-radius: 8px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #FF7F00;
+  box-shadow: 0 0 4px rgba(255,127,0,0.5);
 }
 
 button {
-  padding: 8px 20px;
-  margin-left: 5px;
+  padding: 10px 20px;
+  margin-left: 8px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(to right, #FF7F00, #FFD700);
+  color: #222;
+  font-weight: bold;
   cursor: pointer;
+  transition: 0.3s ease;
 }
 
-/* Liste numaralarını gösterir */
+button:hover {
+  background: linear-gradient(to right, #FF4500, #FFA500);
+  color: white;
+}
+
 ol {
   list-style-type: decimal;
-  list-style-position: outside;
-  display: block;
-  margin-left: 2%;
-  padding-left: 2%;
+  margin-top: 20px;
+  padding-left: 25px;
 }
 
-/* Tamamlanmış görev stili */
+li {
+  margin-bottom: 8px;
+}
+
 li.done {
   text-decoration: line-through;
-  color: white;
-  font-size: small;
+  color: #666;
+  font-size: 0.9em;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .todo-container {
+    width: 80%;
+  }
+
+  input {
+    width: 65%;
+  }
 }
