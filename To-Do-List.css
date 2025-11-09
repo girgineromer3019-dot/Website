@@ -9,7 +9,7 @@ body {
 }
 
 .todo-container {
-  background: rgba(255, 255, 255, 0.85); /* Hafif şeffaf beyaz kutu */
+  background: rgba(240, 240, 240, 0.85); /* Hafif şeffaf beyaz kutu */
   padding: 20px;
   border-radius: 20px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.25);
@@ -58,12 +58,13 @@ ol {
 
 li {
   margin-bottom: 8px;
+  font-size: 1.1em;
 }
 
 li.done {
   text-decoration: line-through;
   color: #666;
-  font-size: 0.9em;
+  font-size: 0.8em;
 }
 
 /* Responsive */
@@ -75,4 +76,24 @@ li.done {
   input {
     width: 65%;
   }
+}
+
+/* Date display */
+.date-display {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+#currentDate {
+  display: block;
+  text-align: right;
+  padding-right: 1em;
+  margin-top: 20px;
+  font-size: 1em; 
+  background: linear-gradient(to right, #ff0101, #ffae3c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-weight: bold;  
 }

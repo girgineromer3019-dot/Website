@@ -44,3 +44,25 @@ document.getElementById("taskInput").addEventListener("keypress", function (e) {
     addTask();
   }
 });
+
+/* Geçerli tarihi göster */
+function showCurrent() {
+  const now = new Date();
+  const options = {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+    };  
+
+  /* Tamamen İngilizce tarih için 'en-US' kullanın */
+  /* Türkçe tarih için 'tr-TR' kullanın */
+  /* Hollanda dili için 'nl-NL' kullanın */
+  document.getElementById('currentDate').textContent =
+    now.toLocaleDateString('nl-NL', options);
+  } 
+  showCurrent();
+  /* Sayfa yüklendiğinde tarihi göster */
+    window.onload = function() {
+    showCurrent();
+};
