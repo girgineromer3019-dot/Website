@@ -99,10 +99,10 @@ li.done {
 
 footer {
   width: 100%;
-  background: linear-gradient(to right, #FFEC8B 0%, #FFD700 33%, #FF7F00 66%, #FF0000 100%);
+  background: rgb(255, 85, 0);
   padding: 5px 0;
   margin-top: 98%;
   text-align: center;
-  font-size: 0.9em;
+  font-size: 1em;
   color: #333;
 }
