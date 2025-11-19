@@ -148,7 +148,7 @@ pre {
   border: 3px solid #4CAF50; /* İstersen rengini değiştirebilirsin */
 }
 
-code { /* Kucuk kod parcalari icin */
+code { /* Kucuk kod parcalari icin, bu tum <code> etkiliyor. */
   background-color: #272822;
   font-size: normal;
   color: #dcdcdc;
