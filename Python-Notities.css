@@ -147,3 +147,12 @@ pre {
   margin: 20px auto;  /* Ortalar */
   border: 3px solid #4CAF50; /* İstersen rengini değiştirebilirsin */
 }
+
+code { /* Kucuk kod parcalari icin */
+  background-color: #272822;
+  font-size: normal;
+  color: #dcdcdc;
+  padding: 0.5px 5px;
+  border-radius: 6px;
+  font-family: "Fira Code", monospace;
+}

@@ -293,6 +293,37 @@
                 print(age_check(age))
             </code>
         </pre>
+        <br>
+    
+        <p class="Titel">Python Modules</p>
+        <p>A module is a Python file that contains functions, variables, or classes. It helps keep code organized and reusable.</p>
+        <p>How to import a modules:</p>
+        <pre>
+            <code>
+            import math
+            from math import sqrt
+            print(math.sqrt(16))  # Output: 4.0 
+            </code>
+        </pre>
+        <p>Types of modules:</p>
+        <ul>
+            <li>Built-in Modules: <code>math</code>, <code>random</code>, <code>datetime</code> ,<code>os</code>,<code>sys</code></li>
+            <li>User-defined modules: your own <code>.py</code> files</li>
+            <li>Third-party modules: installed with pip (<code>requests</code>, <code>numpy</code>, etc.)</li>
+        </ul>
+        <p>Creating your own modules:</p>
+        <pre>
+            <code>
+            # my_module.py
+            def greet(name):
+                return f"Hello, {name}!"    
+            # main.py
+            from my_module import greet
+            print(greet("Omer"))  
+                # Output: Hello, Omer!
+            </code>
+        </pre>
+        </p>
 
     <section id="exercise">
         <h2><i class="fa-solid fa-dumbbell"></i>Exercise</h2>
