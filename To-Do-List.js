@@ -1,3 +1,75 @@
+/* -------------------------------------------------
+   LOCAL STORAGE İÇİN GEREKLİ DEĞİŞKENLER
+---------------------------------------------------*/
+let tasks = [];
+
+
+/* -------------------------------------------------
+   LOCAL STORAGE KAYDETME FONKSİYONU
+---------------------------------------------------*/
+function saveTasks() {
+  localStorage.setItem("todoData", JSON.stringify(tasks));
+}
+
+
+/* -------------------------------------------------
+   LOCAL STORAGE'DAN YÜKLEME FONKSİYONU
+---------------------------------------------------*/
+function loadTasks() {
+  const data = localStorage.getItem("todoData");
+  if (data) {
+    tasks = JSON.parse(data);
+  }
+  renderTasks();
+}
+
+
+/* -------------------------------------------------
+   LİSTEYİ EKRANA ÇİZME FONKSİYONU
+---------------------------------------------------*/
+function renderTasks() {
+  const list = document.getElementById("taskList");
+  list.innerHTML = "";
+
+  tasks.forEach(task => {
+    const li = document.createElement("li");
+    li.textContent = task.text;
+
+    if (task.done) li.classList.add("done");
+
+    /* Görev tıklanınca 'done' sınıfını değiştir */
+    li.addEventListener("click", function () {
+      task.done = !task.done;
+      saveTasks();
+      renderTasks();
+    });
+
+    /* Silme butonu oluştur */
+    const delBtn = document.createElement("button");
+    delBtn.textContent = "Delete";
+    delBtn.style.marginLeft = "10px";
+    delBtn.style.padding = "3px 6px";
+    delBtn.style.fontSize = "12px";
+    delBtn.style.cursor = "pointer";
+
+    /* Silme işlemi */
+    delBtn.onclick = function (e) {
+      e.stopPropagation();
+      tasks = tasks.filter(t => t.id !== task.id);
+      saveTasks();
+      renderTasks();
+    };
+
+    li.appendChild(delBtn);
+    list.appendChild(li);
+  });
+}
+
+
+
+/* -------------------------------------------------
+   addTask FONKSİYONUN
+---------------------------------------------------*/
 function addTask() {
   const input = document.getElementById("taskInput");
   const taskText = input.value.trim();
@@ -5,34 +77,16 @@ function addTask() {
   /* Boşsa ekleme */
   if (taskText === "") return;
 
-  /* Yeni liste elemanı oluştur */
-  const li = document.createElement("li");
-  li.textContent = taskText;
-
-  /* Görev tıklanınca 'done' sınıfını değiştir */ 
-  li.addEventListener("click", function () {
-    li.classList.toggle("done");
-  });
-
-  /* Silme butonu oluştur */
-  const delBtn = document.createElement("button");
-  delBtn.textContent = "Delete";
-  delBtn.style.marginLeft = "10px";
-  delBtn.style.padding = "3px 6px";
-  delBtn.style.fontSize = "12px";
-  delBtn.style.cursor = "pointer";
-
-  /* Silme işlemi */
-  delBtn.onclick = function (e) {
-    e.stopPropagation(); /* li tıklamasını tetiklemesin */
-    li.remove();
+  /* Yeni görev objesi */
+  const taskObj = {
+    id: Date.now(),
+    text: taskText,
+    done: false
   };
 
-  /* Butonu <li>'ye ekle */
-  li.appendChild(delBtn);
-
-  /* <li>'yi listeye ekle */
-  document.getElementById("taskList").appendChild(li);
+  tasks.push(taskObj);
+  saveTasks();
+  renderTasks();
 
   /* Girdi kutusunu temizle */
   input.value = "";
@@ -60,9 +114,11 @@ function showCurrent() {
   /* Hollanda dili için 'nl-NL' kullanın */
   document.getElementById('currentDate').textContent =
     now.toLocaleDateString('nl-NL', options);
-  } 
+} 
+showCurrent();
+
+/* Sayfa yüklendiğinde tarihi göster + LOCALSTORAGE YÜKLEME */
+window.onload = function() {
+  loadTasks();
   showCurrent();
-  /* Sayfa yüklendiğinde tarihi göster */
-    window.onload = function() {
-    showCurrent();
 };
